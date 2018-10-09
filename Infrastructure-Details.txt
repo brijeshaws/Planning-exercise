@@ -1,0 +1,45 @@
+   => Following steps can help improve the process:-
+
+
+1].  Solve the Product versioning issues first:-
+
+o Use Distributed version control system such as Git for maintaing repo, where all the code changes is accessible to 
+  everyone working on project through a Hosting platforms such as GitHub or Bitbucket(In house hosted server). Push 
+  all the code changes periodically to this hosted platform so eveyone can clone it as and when needed.
+
+o Every Developer should create a Separate  Branch for particular project they working on, and develop the product 
+  independently and comit the changes locally. Now that they will have changes in a branch off of master, they can 
+  open a pull request. Pull requests let them tell others about changes they've pushed to a GitHub repository. 
+
+ Once a pull request is sent, interested parties i.e developer involve in projects can review the set of changes, made 
+ by other developers and pull in contribution and merge them into their branch or even push the changes to master branch 
+ to build the final product.
+
+
+2]. Deployment and testing issue. ? 
+
+o Have a CI/CD tool in place such as Jenkins which will speedup the building application and can incorporate various 
+  testing such as QA,Security etc as well to avoid human errors which will and can happen if building,testing,Deployment
+  is done manually.
+
+Important Note:-
+      
+  * Create Separate Jenkins jobs for Deployment on each environment Dev,Test,Staging,Prod etc.
+  * Create a separate jobs for Backup/restore in case something fails during new release, you should be ready to roll 
+    back to previous version without hassle.
+
+  * Automate the roll back process on previous version if deployment fails.    
+  * Preserve build history as per compliance requirements in build jobs.
+
+
+3]. After the product is ready for delivery, Deploy it on Development environment and observe the changes, if satisfied, 
+    push the changes onto UAT environment and share it with customer for feedback.
+
+
+4]. Once UAT enviornemnt comes clean and customers are happy with proposted changes push the changes onto production.
+
+
+5]. Follow same procedure [1-5] for next release.
+
+
+
